@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "marca": "Gala Post",
+    "publicaciones": "Posts",
+    "admin": "Admin"
+  },
+  "inicio": {
+    "destacado": "Latest",
+    "leerArticulo": "Read Full Story",
+    "publicacionesRecientes": "Recent Posts",
+    "sinPublicaciones": "No posts yet. Be the first to create one!"
+  },
+  "formularioPost": {
+    "etiquetaTitulo": "Post Title",
+    "marcadorTitulo": "Enter post title...",
+    "etiquetaContenido": "Post Content",
+    "marcadorContenido": "Start weaving your narrative...",
+    "etiquetaImagen": "Hero Image URL",
+    "marcadorImagen": "https://images.example.com/photo.jpg",
+    "sugerenciaImagen": "Must be a direct URL to an image file (.jpg, .png, .webp). E.g: https://images.unsplash.com/photo-xxx",
+    "publicar": "Publish",
+    "guardar": "Save Changes",
+    "cancelar": "Cancel",
+    "vistaPrevia": "Visual Preview",
+    "borrador": "Draft",
+    "publicado": "Published",
+    "detallesPublicacion": "Publication Details",
+    "ultimaEdicion": "Last Edited",
+    "contadorPalabras": "Word Count",
+    "palabras": "words",
+    "imagenCargada": "Image Loaded"
+  },
+  "nuevaPublicacion": {
+    "titulo": "Create New Post"
+  },
+  "editarPublicacion": {
+    "titulo": "Edit Post"
+  },
+  "admin": {
+    "etiqueta": "Admin panel",
+    "titulo": "Posts",
+    "crearNuevo": "Create New Post",
+    "marcadorBusqueda": "Search post titles...",
+    "filtrar": "Filter",
+    "ordenar": "Sort",
+    "columnaTitulo": "Post Title",
+    "columnaFecha": "Publication Date",
+    "columnaAcciones": "Actions",
+    "publicado": "Published",
+    "totalPublicaciones": "Total Posts",
+    "esteMes": "this month",
+    "mostrando": "Showing",
+    "de": "of",
+    "entradas": "entries",
+    "sinResultados": "No posts match your search.",
+    "confirmarEliminar": "Are you sure you want to delete this post?"
+  },
+  "detallePublicacion": {
+    "volverInicio": "Back to home",
+    "publicadoEl": "Published on",
+    "editar": "Edit",
+    "eliminar": "Delete"
+  },
+  "errores": {
+    "errorCarga": "Failed to load posts. Please try again.",
+    "errorGuardar": "Failed to save post. Please try again.",
+    "errorEliminar": "Failed to delete post. Please try again.",
+    "noEncontrado": "Post not found."
+  },
+  "cargando": {
+    "publicaciones": "Loading posts...",
+    "publicacion": "Loading post..."
+  },
+  "footer": {
+    "derechosReservados": "© 2026 Gala Post. All intellectual property curated."
+  }
+}

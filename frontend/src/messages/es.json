@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "marca": "Gala Post",
+    "publicaciones": "Publicaciones",
+    "admin": "Administración"
+  },
+  "inicio": {
+    "destacado": "Reciente",
+    "leerArticulo": "Leer artículo completo",
+    "publicacionesRecientes": "Publicaciones recientes",
+    "sinPublicaciones": "Aún no hay publicaciones. ¡Sé el primero en crear una!"
+  },
+  "formularioPost": {
+    "etiquetaTitulo": "Título del Post",
+    "marcadorTitulo": "Ingresa el título...",
+    "etiquetaContenido": "Contenido del artículo",
+    "marcadorContenido": "Comienza a escribir tu historia...",
+    "etiquetaImagen": "URL de imagen principal",
+    "marcadorImagen": "https://images.ejemplo.com/foto.jpg",
+    "sugerenciaImagen": "Debe ser una URL directa a un archivo de imagen (.jpg, .png, .webp). Ej: https://images.unsplash.com/photo-xxx",
+    "publicar": "Publicar",
+    "guardar": "Guardar cambios",
+    "cancelar": "Cancelar",
+    "vistaPrevia": "Vista previa",
+    "borrador": "Borrador",
+    "publicado": "Publicado",
+    "detallesPublicacion": "Detalles de publicación",
+    "ultimaEdicion": "Última edición",
+    "contadorPalabras": "Palabras",
+    "palabras": "palabras",
+    "imagenCargada": "Imagen cargada"
+  },
+  "nuevaPublicacion": {
+    "titulo": "Crear Nueva Noticia"
+  },
+  "editarPublicacion": {
+    "titulo": "Editar Noticia"
+  },
+  "admin": {
+    "etiqueta": "Panel administrativo",
+    "titulo": "Publicaciones",
+    "crearNuevo": "Crear nueva noticia",
+    "marcadorBusqueda": "Buscar títulos...",
+    "filtrar": "Filtrar",
+    "ordenar": "Ordenar",
+    "columnaTitulo": "Título",
+    "columnaFecha": "Fecha de publicación",
+    "columnaAcciones": "Acciones",
+    "publicado": "Publicado",
+    "totalPublicaciones": "Total de noticias",
+    "esteMes": "este mes",
+    "mostrando": "Mostrando",
+    "de": "de",
+    "entradas": "entradas",
+    "sinResultados": "No hay publicaciones que coincidan con tu búsqueda.",
+    "confirmarEliminar": "¿Estás seguro de que deseas eliminar esta publicación?"
+  },
+  "detallePublicacion": {
+    "volverInicio": "Volver al inicio",
+    "publicadoEl": "Publicado el",
+    "editar": "Editar",
+    "eliminar": "Eliminar"
+  },
+  "errores": {
+    "errorCarga": "Error al cargar las noticias. Intenta de nuevo.",
+    "errorGuardar": "Error al guardar la noticia. Intenta de nuevo.",
+    "errorEliminar": "Error al eliminar la noticia. Intenta de nuevo.",
+    "noEncontrado": "Noticia no encontrada."
+  },
+  "cargando": {
+    "publicaciones": "Cargando noticias...",
+    "publicacion": "Cargando noticia..."
+  },
+  "footer": {
+    "derechosReservados": "© 2026 Gala Post. Todos los derechos reservados."
+  }
+}
