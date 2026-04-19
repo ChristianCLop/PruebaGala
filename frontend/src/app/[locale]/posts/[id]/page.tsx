@@ -48,7 +48,7 @@ export default function PaginaDetallePublicacion({ params }: Props) {
 
   if (cargando) {
     return (
-      <div className="max-w-[1440px] mx-auto px-8 py-12 animate-pulse">
+      <div className="max-w-360 mx-auto px-8 py-12 animate-pulse">
         <div className="h-4 w-32 bg-surface-container-high rounded mb-12" />
         <div className="h-72 w-full rounded-xl bg-surface-container-high mb-8" />
         <div className="h-12 w-3/4 bg-surface-container-high rounded mb-4" />
@@ -64,7 +64,7 @@ export default function PaginaDetallePublicacion({ params }: Props) {
 
   if (error || !publicacion) {
     return (
-      <div className="max-w-[1440px] mx-auto px-8 py-20 text-center">
+      <div className="max-w-360 mx-auto px-8 py-20 text-center">
         <p className="text-on-surface-variant text-lg mb-6">{error ?? tErr("noEncontrado")}</p>
         <Link href={`/${idioma}`} className="text-primary hover:underline text-sm">
           ← {t("volverInicio")}
@@ -87,7 +87,7 @@ export default function PaginaDetallePublicacion({ params }: Props) {
         </div>
       )}
 
-      <div className="max-w-[720px] mx-auto px-8 py-12">
+      <div className="max-w-180 mx-auto px-8 py-12">
         {/* Enlace para volver */}
         <Link
           href={`/${idioma}`}
