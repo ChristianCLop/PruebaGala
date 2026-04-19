@@ -218,7 +218,11 @@ El proyecto utiliza **referencias por URL externa**. No se almacenan archivos en
 
 ## Internacionalización (i18n)
 
-La interfaz está disponible en **español** e **inglés**. El idioma se selecciona desde la barra de navegación y se persiste en la URL (`/es/...` o `/en/...`).
+El proyecto implementa dos capas de traducción independientes:
+
+### 1. Interfaz de usuario — next-intl
+
+La UI está disponible en **español** e **inglés**. El idioma se selecciona desde la barra de navegación y se persiste en la URL (`/es/...` o `/en/...`).
 
 Los archivos de traducción se encuentran en:
 ```
@@ -227,7 +231,25 @@ frontend/src/messages/
 └── en.json   # Inglés
 ```
 
-El contenido de las publicaciones (título, cuerpo) se almacena en el idioma en que fue escrito.
+### 2. Contenido de publicaciones — DeepL API
+
+El título y el cuerpo de cada publicación se traducen automáticamente al idioma activo mediante la **API de DeepL**. La detección del idioma original es automática, por lo que las publicaciones pueden escribirse en cualquier idioma.
+
+- Una sola llamada a DeepL traduce todas las publicaciones del feed simultáneamente.
+- Si la clave no está configurada o la llamada falla, se muestra el texto original sin error.
+
+#### Obtener una clave de DeepL (gratuita)
+
+1. Ir a [deepl.com/pro#developer](https://deepl.com/pro#developer)
+2. Registrarse con el plan **DeepL API Free** (1 000 000 caracteres)
+3. Copiar la clave de API desde el panel de cuenta
+4. Agregarla al archivo `.env` del backend:
+
+```env
+DEEPL_API_KEY="api_key_deepL"
+```
+
+> Si prefiere no crear una cuenta, puede contactarme y le facilitare acceso a la clave que utilicé durante el desarrollo:
 
 ---
 
