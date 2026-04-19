@@ -33,14 +33,18 @@ async function handleResponse<T>(res: Response): Promise<T> {
 }
 
 export const api = {
-  getAllPosts: (): Promise<Post[]> =>
-    fetch(`${API_URL}/posts`).then((r) => handleResponse<Post[]>(r)),
+  getAllPosts: (locale?: string): Promise<Post[]> =>
+    fetch(`${API_URL}/posts${locale ? `?lang=${locale}` : ""}`).then((r) =>
+      handleResponse<Post[]>(r)
+    ),
 
   getPostById: (id: number): Promise<Post> =>
     fetch(`${API_URL}/posts/${id}`).then((r) => handleResponse<Post>(r)),
 
-  getPostBySlug: (slug: string): Promise<Post> =>
-    fetch(`${API_URL}/posts/slug/${slug}`).then((r) => handleResponse<Post>(r)),
+  getPostBySlug: (slug: string, locale?: string): Promise<Post> =>
+    fetch(`${API_URL}/posts/slug/${slug}${locale ? `?lang=${locale}` : ""}`).then((r) =>
+      handleResponse<Post>(r)
+    ),
 
   createPost: (data: {
     title: string;

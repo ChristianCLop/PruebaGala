@@ -157,7 +157,7 @@ export default function PaginaInicio({ params }: Props) {
 
   useEffect(() => {
     api
-      .getAllPosts()
+      .getAllPosts(idioma)
       .then(setPublicaciones)
       .catch(() => setError(tErr("errorCarga")))
       .finally(() => setCargando(false));
