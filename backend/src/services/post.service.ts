@@ -1,6 +1,7 @@
 import { prisma } from "../config/database";
 import { AppError } from "../middlewares/errorHandler.middleware";
 import { CreatePostDTO, UpdatePostDTO } from "../validators/post.validator";
+import { traducir } from "./translation.service";
 
 // Genera un slug a partir de un título, añadiéndole una marca de tiempo para garantizar unicidad
 const generarSlug = (titulo: string): string => {
@@ -24,6 +25,22 @@ export const postService = {
     });
   },
 
+  // Devuelve todas las publicaciones con título y contenido traducidos en una sola llamada a DeepL
+  async findAllTraducidos(idiomaDestino: string) {
+    const publicaciones = await postService.findAll();
+    if (publicaciones.length === 0) return publicaciones;
+
+    // Array plano: [title1, content1, title2, content2, ...]
+    const textos = publicaciones.flatMap((p) => [p.title, p.content]);
+    const traducidos = await traducir(textos, idiomaDestino);
+
+    return publicaciones.map((p, i) => ({
+      ...p,
+      title: traducidos[i * 2],
+      content: traducidos[i * 2 + 1],
+    }));
+  },
+
   // Busca una publicación por ID; lanza error 404 si no existe
   async findById(id: number) {
     const publicacion = await prisma.post.findUnique({ where: { id } });
@@ -36,6 +53,16 @@ export const postService = {
     const publicacion = await prisma.post.findUnique({ where: { slug } });
     if (!publicacion) throw new AppError(404, `Post con slug "${slug}" no encontrado`);
     return publicacion;
+  },
+
+  // Busca por slug y traduce título y contenido al idioma destino con DeepL
+  async findBySlugTraducido(slug: string, idiomaDestino: string) {
+    const publicacion = await postService.findBySlug(slug);
+    const [titulo, contenido] = await traducir(
+      [publicacion.title, publicacion.content],
+      idiomaDestino
+    );
+    return { ...publicacion, title: titulo, content: contenido };
   },
 
   // Crea una nueva publicación y genera su slug automáticamente a partir del título

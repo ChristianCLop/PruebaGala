@@ -1,14 +1,17 @@
 import { Request, Response, NextFunction } from "express";
 import { postService } from "../services/post.service";
 
-// GET /api/posts
+// GET /api/posts?lang=es|en
 export const getAllPosts = async (
-  _req: Request,
+  req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> => {
   try {
-    const publicaciones = await postService.findAll();
+    const lang = req.query.lang as string | undefined;
+    const publicaciones = lang
+      ? await postService.findAllTraducidos(lang)
+      : await postService.findAll();
     res.json({ status: "success", data: publicaciones });
   } catch (error) {
     next(error);
@@ -30,14 +33,18 @@ export const getPostById = async (
   }
 };
 
-// GET /api/posts/slug/:slug
+// GET /api/posts/slug/:slug?lang=es|en
 export const getPostBySlug = async (
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> => {
   try {
-    const publicacion = await postService.findBySlug(req.params.slug as string);
+    const slug = req.params.slug as string;
+    const lang = req.query.lang as string | undefined;
+    const publicacion = lang
+      ? await postService.findBySlugTraducido(slug, lang)
+      : await postService.findBySlug(slug);
     res.json({ status: "success", data: publicacion });
   } catch (error) {
     next(error);

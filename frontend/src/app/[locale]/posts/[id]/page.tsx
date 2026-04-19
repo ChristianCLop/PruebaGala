@@ -27,7 +27,7 @@ export default function PaginaDetallePublicacion({ params }: Props) {
   useEffect(() => {
     // [id] contiene el slug al navegar desde las tarjetas del inicio
     api
-      .getPostBySlug(id)
+      .getPostBySlug(id, idioma)
       .then(setPublicacion)
       .catch(() => setError(tErr("noEncontrado")))
       .finally(() => setCargando(false));
