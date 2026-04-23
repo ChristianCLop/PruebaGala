@@ -1,13 +1,13 @@
 -- =============================================================
---  MediaHub  –  PostgreSQL Schema
+--  PostPlace  –  PostgreSQL Schema
 --  Run this in DBeaver to create the database and tables
 -- =============================================================
 
 -- 1. Create the database (run this separately if it does not exist yet)
--- CREATE DATABASE mediahub_db;
+-- CREATE DATABASE postplace_db;
 
 -- 2. Connect to the database and then run the rest of this script
--- \c mediahub_db;
+-- \c postplace_db;
 
 -- =============================================================
 --  Table: posts
@@ -48,10 +48,10 @@ CREATE INDEX IF NOT EXISTS idx_posts_created_at ON posts (created_at DESC);
 -- =============================================================
 INSERT INTO posts (title, content, image_url, slug) VALUES
 (
-    'Welcome to MediaHub',
-    'This is the first post on MediaHub. Here you will find the latest news and articles.',
+    'Welcome to PostPlace',
+    'This is the first post on PostPlace. Here you will find the latest news and articles.',
     'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800',
-    'welcome-to-mediahub-1700000000000'
+    'welcome-to-postplace-1700000000000'
 ),
 (
     'Getting Started with Next.js',

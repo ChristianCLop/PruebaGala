@@ -1,4 +1,4 @@
-# MediaHub — App de publicaciones internacionalizado
+# PostPlace — App de publicaciones internacionalizado
 
 Gestor de noticias/publicaciones con soporte multilingüe (ES / EN).
 
@@ -90,7 +90,7 @@ cp .env.example .env
 Edita `.env` con tus datos:
 
 ```env
-DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/mediahub_db"
+DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/postplace_db"
 PORT=4000
 FRONTEND_URL=http://localhost:3000
 NODE_ENV=development
@@ -100,7 +100,7 @@ DEEPL_API_KEY="api_key_deepL"
 Crea la base de datos en PostgreSQL:
 
 ```sql
-CREATE DATABASE mediahub_db;
+CREATE DATABASE postplace_db;
 ```
 
 Aplica el esquema con Prisma:
@@ -350,7 +350,7 @@ Este es un estracto de el flujo de trabajo utilizado en el desarrollo del proyec
 
 | Variable | Ejemplo | Descripción |
 |---|---|---|
-| `DATABASE_URL` | `postgresql://user:pass@localhost:5432/mediahub_db` | Cadena de conexión a PostgreSQL |
+| `DATABASE_URL` | `postgresql://user:pass@localhost:5432/postplace_db` | Cadena de conexión a PostgreSQL |
 | `PORT` | `4000` | Puerto del servidor Express |
 | `FRONTEND_URL` | `http://localhost:3000` | Origen permitido por CORS |
 | `NODE_ENV` | `development` | Entorno de ejecución |
