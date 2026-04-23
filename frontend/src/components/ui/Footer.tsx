@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-360 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <div className="font-headline italic text-lg text-[#111111] mb-2">
-            Gala Post
+            MediaHub
           </div>
           <p className="font-sans text-sm text-[#111111]/60">{t("derechosReservados")}</p>
         </div>

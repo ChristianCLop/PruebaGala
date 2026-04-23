@@ -1,6 +1,6 @@
 {
   "nav": {
-    "marca": "Gala Post",
+    "marca": "MediaHub",
     "publicaciones": "Publicaciones",
     "admin": "Administración"
   },
@@ -72,6 +72,6 @@
     "publicacion": "Cargando noticia..."
   },
   "footer": {
-    "derechosReservados": "© 2026 Gala Post. Todos los derechos reservados."
+    "derechosReservados": "© 2026 MediaHub. Todos los derechos reservados."
   }
 }
