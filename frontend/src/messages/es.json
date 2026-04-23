@@ -1,6 +1,6 @@
 {
   "nav": {
-    "marca": "Gala Post",
+    "marca": "PostPlace",
     "publicaciones": "Publicaciones",
     "admin": "Administración"
   },
@@ -72,6 +72,6 @@
     "publicacion": "Cargando noticia..."
   },
   "footer": {
-    "derechosReservados": "© 2026 Gala Post. Todos los derechos reservados."
+    "derechosReservados": "© 2026 PostPlace. Todos los derechos reservados."
   }
 }

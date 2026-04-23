@@ -1,6 +1,6 @@
-# Gala Post — Prueba Técnica Fullstack Junior
+# PostPlace — App de publicaciones internacionalizado
 
-Gestor de noticias/publicaciones con soporte multilingüe (ES / EN), desarrollado como prueba técnica para la posición de Desarrollador Fullstack Junior-Mid.
+Gestor de noticias/publicaciones con soporte multilingüe (ES / EN).
 
 ---
 
@@ -33,7 +33,7 @@ Gestor de noticias/publicaciones con soporte multilingüe (ES / EN), desarrollad
 ## Estructura del repositorio
 
 ```
-Gala/
+root/
 ├── backend/          # API REST con Express + Prisma
 │   ├── prisma/       # Esquema y migraciones de BD
 │   └── src/
@@ -70,7 +70,6 @@ Gala/
 
 ```bash
 git clone <url-del-repositorio>
-cd Gala
 ```
 
 ---
@@ -91,16 +90,17 @@ cp .env.example .env
 Edita `.env` con tus datos:
 
 ```env
-DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/gala_db"
+DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/postplace_db"
 PORT=4000
 FRONTEND_URL=http://localhost:3000
 NODE_ENV=development
+DEEPL_API_KEY="api_key_deepL"
 ```
 
 Crea la base de datos en PostgreSQL:
 
 ```sql
-CREATE DATABASE gala_db;
+CREATE DATABASE postplace_db;
 ```
 
 Aplica el esquema con Prisma:
@@ -249,8 +249,6 @@ El título y el cuerpo de cada publicación se traducen automáticamente al idio
 DEEPL_API_KEY="api_key_deepL"
 ```
 
-> Si prefiere no crear una cuenta, puede contactarme y le facilitare acceso a la clave que utilicé durante el desarrollo:
-
 ---
 
 ## Patrones de diseño aplicados
@@ -352,10 +350,12 @@ Este es un estracto de el flujo de trabajo utilizado en el desarrollo del proyec
 
 | Variable | Ejemplo | Descripción |
 |---|---|---|
-| `DATABASE_URL` | `postgresql://user:pass@localhost:5432/gala_db` | Cadena de conexión a PostgreSQL |
+| `DATABASE_URL` | `postgresql://user:pass@localhost:5432/postplace_db` | Cadena de conexión a PostgreSQL |
 | `PORT` | `4000` | Puerto del servidor Express |
 | `FRONTEND_URL` | `http://localhost:3000` | Origen permitido por CORS |
 | `NODE_ENV` | `development` | Entorno de ejecución |
+| `DEEPL_API_KEY` | `api_key_deepL` | API DeepL para traducción de publicaciones |
+
 
 ### Frontend (`.env.local`)
 

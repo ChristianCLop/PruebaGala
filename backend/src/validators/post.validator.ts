@@ -5,29 +5,29 @@ import { z } from "zod";
 export const createPostSchema = z.object({
   title: z
     .string()
-    .min(3, "Title must be at least 3 characters")
-    .max(255, "Title must not exceed 255 characters"),
+    .min(3, "Titulo debe tener al menos 3 caracteres")
+    .max(255, "Titulo no debe exceder los 255 caracteres"),
   content: z
     .string()
-    .min(10, "Content must be at least 10 characters"),
+    .min(10, "Contenido debe tener al menos 10 caracteres"),
   imageUrl: z
     .string()
-    .url("imageUrl must be a valid URL"),
+    .url("imageUrl debe ser una URL válida"),
 });
 
 export const updatePostSchema = z.object({
   title: z
     .string()
-    .min(3, "Title must be at least 3 characters")
-    .max(255, "Title must not exceed 255 characters")
+    .min(3, "Titulo debe tener al menos 3 caracteres")
+    .max(255, "Titulo no debe exceder los 255 caracteres")
     .optional(),
   content: z
     .string()
-    .min(10, "Content must be at least 10 characters")
+    .min(10, "Contenido debe tener al menos 10 caracteres")
     .optional(),
   imageUrl: z
     .string()
-    .url("imageUrl must be a valid URL")
+    .url("imageUrl debe ser una URL válida")
     .optional()
     .or(z.literal("")),
 });
